@@ -1,3 +1,7 @@
+rightWristX=0;
+leftWristX=0;
+difference=0;
+
 function setup()
 {
     video = createCapture(VIDEO);
@@ -9,16 +13,15 @@ function setup()
 }
 function draw()
 {
-    background('#00FFFF')
+    background('#00FFFF');
     document.getElementById("font_size").innerHTML = "Font Size Of The Text Will Be = "+difference+"px";
     textSize(difference);
-    textSize(10);
-    fiil('#F90093')
+    fill('#F90093');
     text('Shadow', 50,400);
 }
 function modelLoaded()
 {
-    console.log('PoseNet is initialized!')
+    console.log('PoseNet is initialized!');
 }
 function gotPoses(results)
 {
